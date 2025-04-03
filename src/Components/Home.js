@@ -4,7 +4,7 @@ import { Data } from "../Datas/HomeData.js"
 import About from "../Components/About.js"
 import Contact from "../Components/Contact.js"
 import {  motion } from "framer-motion";
-
+import { Link } from 'react-router-dom';
 // import Footer from './Footer.js';
 
     export default function Home(){
@@ -116,18 +116,18 @@ import {  motion } from "framer-motion";
             <div className='section1'>
 
             {Data.map((data,index)=>(
-            <motion.a
+            <motion.div
             transition={{
                 duration: 2,
                 type:"spring",
-
             }}
             initial={{y:400 , opacity:0}}
-                whileInView={{y:0, opacity:1}}
-            href={data.href} key={index}>
+                whileInView={{y:0, opacity:1}}>
+                <Link to={data.href} key={index}>
                 <img src={data.src} alt='img'/>
                 <p>{data.title}</p>
-                </motion.a>
+                </Link>
+            </motion.div>
             ))}
             
             </div>
