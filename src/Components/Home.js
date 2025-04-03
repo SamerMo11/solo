@@ -12,8 +12,8 @@ import {  motion } from "framer-motion";
 
     const accVariantsDiv ={
         hidden:{
-            opacity:0,
-            y: 50
+            opacity:1,
+            y: 0
         },
         visible:{
             y: 0,
