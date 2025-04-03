@@ -1,8 +1,8 @@
 import '../css/chars.css';
 import {chars} from "../Datas/CharsData"
 import Charcard from "../Components/charcard"
-import { useState } from 'react';
-import { delay, motion } from 'framer-motion';
+// import { useState } from 'react';
+import {  motion } from 'framer-motion';
 export default function Characters() {
     const datashow = chars.map((el)=> <Charcard 
     img={el.img}

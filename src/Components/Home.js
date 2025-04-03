@@ -3,7 +3,7 @@ import logo from "../assets/main/logo.webp"
 import { Data } from "../Datas/HomeData.js"
 import About from "../Components/About.js"
 import Contact from "../Components/Contact.js"
-import { delay, motion } from "framer-motion";
+import {  motion } from "framer-motion";
 
 // import Footer from './Footer.js';
 
@@ -12,10 +12,12 @@ import { delay, motion } from "framer-motion";
 
     const accVariantsDiv ={
         hidden:{
-            y: 0
+            opacity:0,
+            y: 50
         },
         visible:{
             y: 0,
+            opacity:1,
             transition:{
                 delay: 2,
                 staggerChildren: .5

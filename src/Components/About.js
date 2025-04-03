@@ -3,14 +3,14 @@ import '../css/about.css';
 import { motion } from "framer-motion";
 export default function About(){
 
-    const paras = {
-        hidden: {
-            opacity:0
-        },
-        visible : {
-            opacity:1
-        }
-    }
+    // const paras = {
+    //     hidden: {
+    //         opacity:0
+    //     },
+    //     visible : {
+    //         opacity:1
+    //     }
+    // }
 
     return(
         <div className="about" id="about">
