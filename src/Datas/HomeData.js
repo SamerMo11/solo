@@ -7,21 +7,21 @@ export const Data = [
         key:"1",
         src: img1,
         title:"characters",
-        href: "characters",
+        href: "/characters",
         inview: "transform: translateX(0)"
     },
     {
         key:"2",
         src: img2,
         title:"fights",
-        href: "fights",
+        href: "/fights",
         inview: "transform: translateY(0)"
     },
     {
         key:"3",
         src: img3,
         title:"story",
-        href: "story",
+        href: "/story",
         inview: "translateX(0)"
     },
 ]
