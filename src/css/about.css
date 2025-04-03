@@ -1,0 +1,108 @@
+.about{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    background-image: url(../assets/main/sec.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+#about{
+    padding-right: 10%;
+
+}
+.about img{
+    width: 40%;
+    height: 100%;
+    object-fit: contain;
+    animation-name: shadow;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+@keyframes shadow {
+    from{
+        filter: drop-shadow(0 0 0px var(--color2));
+
+    }
+    to{
+        filter: drop-shadow(0 0 15px var(--color2));
+
+    }
+}
+.about .aboutCont{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    width: 50%;
+    gap: 30px;
+}
+.about .aboutCont p:nth-child(1){
+    color: var(--color1);
+    text-shadow:  0 0 4px var(--color1),0 0 2px var(--color2),0 0 20px var(--color2),0 0 30px var(--color2);
+    font-size: 40px;
+    text-transform: uppercase;
+}
+.about .aboutCont p:nth-child(2),
+.about .aboutCont p:nth-child(3){
+    color: var(--color1);
+    font-size: 16px;
+    width: 90%;
+    line-height: 25px;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+.about .aboutCont a{
+    text-decoration: none;
+    color: var(--color1);
+    text-transform: capitalize;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border-left: 2px solid var(--color2);
+    border-right: 2px solid var(--color2);
+    transition: .5s;
+    background-color: #171717;
+}
+.about .aboutCont a:hover{
+     border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    /* color: var(--color2);  */
+    box-shadow:  0 0 4px var(--color1),0 0 2px var(--color2),0 0 20px var(--color2),0 0 30px var(--color2);
+
+}
+@media (max-width:767px) {
+
+.about {
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    align-items: start;
+
+}
+#about{
+    padding-right: 0;
+}
+.about img {
+    width: 60%;
+}
+.about .aboutCont {
+    align-items: start;
+    padding-left: 5%;
+    width: 100%;
+}
+.about .aboutCont p:nth-child(1) {
+    font-size: clamp(3vw, 12vw, 23vw);
+}
+.about .aboutCont p:nth-child(2),
+.about .aboutCont p:nth-child(3) {
+    color: var(--color1);
+    font-size: clamp(3vw, 4vw, 6vw);
+}
+}

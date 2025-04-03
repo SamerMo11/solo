@@ -7,7 +7,26 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#root{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quantico","Noto Sans","Malgun Gothic","Apple SD Gothic Neo",sans-serif;
+  scroll-behavior: smooth;
+  background-color: #171717;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-corner {
+  background: #171717;
+}
+::-webkit-scrollbar-track {
+  background-color: #171717;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color2);
+  border-radius: 10px;
 }

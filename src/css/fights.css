@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color1: #fff ;
+    --color2: #6137ff ;
+}
+.fights{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+    background-color: #171717;
+}
+.fights > video{
+    width: 100%;
+}
+.fights .title{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size:  clamp(1vw, 2vw, 2vw);;
+    color: #fff;
+    text-shadow:  0 0 4px var(--color1),0 0 2px var(--color2),0 0 20px var(--color2),0 0 30px var(--color2);
+    text-transform: uppercase;
+}
+.fights .title.active{
+    color: red;
+}
+.fights .videos{
+    position: absolute;
+    bottom: 0;
+    left: 70%;
+    /* transform: translateX(-50%); */
+    width: 25%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    animation-name: story;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+    animation-delay: .5s;
+    opacity: 0;
+}
+@keyframes story {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+  }
+.fights .videos .video{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+.fights .videos img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.fights .videos .video span{
+    position: absolute;
+    top: -75px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200px;
+    color: var(--color1);
+    text-shadow:  0 0 4px var(--color1),0 0 2px var(--color2),0 0 20px var(--color2),0 0 30px var(--color2);
+    text-transform: capitalize;
+    font-size:  clamp(1vw, 1vw, 2vw);;
+    opacity: 0;
+    transition: 1s;
+    clip-path: polygon(0 0, 100% 0, 100% 30%, 60% 30%, 50% 55%, 40% 30%, 0 30%);
+    background-color: #171717;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 100px;
+}
+.fights .videos .video:hover span{
+    opacity: 1;
+}
+@media (max-width:767px) {
+    .fights .title {
+        bottom: 20%;
+        font-size: clamp(1vw, 5vw, 7vw);
+        width: 100%;
+        text-align: center;
+    }
+    .fights .videos {
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60%;
+    }
+    .fights .videos .video span {
+        font-size: clamp(1vw, 3vw, 15vw);
+        text-align: center;
+        padding-bottom: 65px;
+        width: 150px;
+        top: -50px;
+    }
+}

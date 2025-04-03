@@ -1,0 +1,11 @@
+#contact{
+    flex-direction: row-reverse;
+    padding-left: 10%;
+}
+@media (max-width:767px) {
+    #contact{
+        flex-direction: column;
+        padding-left: 5%;
+        align-items: end;
+    }
+}

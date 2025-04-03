@@ -1,0 +1,68 @@
+.storyCont{
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #171717;
+}
+
+.storyCont video{
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    position: absolute;
+    object-fit: cover;
+}
+.storyCont .paraCont{
+    width: 28%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+.storyCont .paraCont .paras{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+    animation-name: paras;
+    animation-duration: 40s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    transform: translateY(100%); 
+
+}
+@keyframes paras {
+    from {
+        transform: translateY(100%); 
+    }
+    to {
+        transform: translateY(-400%); 
+    }
+
+  }
+.storyCont .paraCont .paras p{
+    color: var(--color1);
+    text-transform: capitalize;
+    text-align: center;
+    width: 90%;
+    /* font-size: 16px; */
+}
+@media (max-width:767px) {
+    .storyCont .paraCont {
+        width: 90%;
+    }
+    .storyCont .paraCont .paras p {
+        font-size: clamp(3vw, 4vw, 10vw);
+    }
+}
